@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="privacyPolicyVM" type="com.snakesapplication.app.modules.privacypolicy.data.viewmodel.PrivacyPolicyVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnclose"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/_20pxh"
+        android:layout_marginStart="@dimen/_16pxh"
+        android:layout_marginTop="@dimen/_12pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:id="@+id/linearPrivacyPolicy"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_gray_300_radius_18"
+                android:id="@+id/btnClose" android:layout_gravity="end"
+                android:layout_height="@dimen/_36pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_width="@dimen/_36pxh"
+                android:paddingHorizontal="@dimen/_12pxh"
+                android:paddingVertical="@dimen/_12pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_close" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTitle"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_4pxh"
+                android:layout_marginTop="@dimen/_13pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{privacyPolicyVM.privacyPolicyModel.txtTitle}"
+                style="@style/txtPoppinssemibold18" tools:text="@string/lbl_privacy_policy2"/>
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtEffectiveSept"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_4pxh"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{privacyPolicyVM.privacyPolicyModel.txtEffectiveSept}"
+                style="@style/txtPoppinsregular14_2" tools:text="@string/msg_effective_september"/>
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtYoucanseeour"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_4pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{privacyPolicyVM.privacyPolicyModel.txtYoucanseeour}"
+                style="@style/txtPoppinsregular12" tools:text="@string/msg_you_can_see_our"/>
+            <TextView android:gravity="start"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_4pxh"
+                android:layout_marginTop="@dimen/_23pxv"
+                android:layout_width="match_parent"
+                android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescription}"
+                style="@style/txtPoppinsregular14_4" tools:text="@string/msg_lorem_ipsum_dolor5"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescriptionOne"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4pxh"
+                android:layout_marginTop="@dimen/_22pxv"
+                android:layout_width="match_parent"
+                android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescriptionOne}"
+                style="@style/txtPoppinsregular14_4" tools:text="@string/msg_lorem_ipsum_dolor4"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescriptionTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4pxh"
+                android:layout_marginTop="@dimen/_22pxv"
+                android:layout_width="match_parent"
+                android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescriptionTwo}"
+                style="@style/txtPoppinsregular14_4" tools:text="@string/msg_lorem_ipsum_dolor4"/>
+            <TextView android:gravity="start"
+                android:id="@+id/txtDescriptionThree"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_4pxh"
+                android:layout_marginTop="@dimen/_22pxv"
+                android:layout_width="match_parent"
+                android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescriptionThree}"
+                style="@style/txtPoppinsregular14_4" tools:text="@string/msg_lorem_ipsum_dolor5"/>
+            <View
+                android:background="@drawable/rectangle_bg_gray_600_radius_1_5"
+                android:id="@+id/viewEllipseSeventeen"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_3pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_99pxv" android:layout_width="@dimen/_3pxh"/>
+            <View
+                android:background="@drawable/rectangle_bg_gray_600_radius_1_5"
+                android:id="@+id/viewEllipseSeventeenOne"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_3pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_29pxv" android:layout_width="@dimen/_3pxh"/>
+            <View
+                android:background="@drawable/rectangle_bg_gray_600_radius_1_5"
+                android:id="@+id/viewEllipseSeventeenTwo"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_3pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_29pxv" android:layout_width="@dimen/_3pxh"/>
+            <View
+                android:background="@drawable/rectangle_bg_gray_600_radius_1_5"
+                android:id="@+id/viewEllipseSeventeenThree"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_3pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_29pxv" android:layout_width="@dimen/_3pxh"/>
+            <View
+                android:background="@drawable/rectangle_bg_gray_600_radius_1_5"
+                android:id="@+id/viewEllipseSeventeenFour"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_3pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_29pxv" android:layout_width="@dimen/_3pxh"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

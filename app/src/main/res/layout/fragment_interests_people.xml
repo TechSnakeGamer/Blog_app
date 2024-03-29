@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="interestsPeopleVM" type="com.snakesapplication.app.modules.interestspeople.data.viewmodel.InterestsPeopleVM"/>
+    </data>
+    <androidx.core.widget.NestedScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollview"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+        <LinearLayout android:id="@+id/linearColumnframesixteen"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <View android:id="@+id/viewFrameSixteen"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_28pxv"
+                android:layout_marginEnd="@dimen/_96pxh"
+                android:layout_marginStart="@dimen/_96pxh" android:layout_width="@dimen/_48pxh"/>
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_29pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{interestsPeopleVM.interestsPeopleModel.txtPrice}"
+                style="@style/txtPoppinssemibold14" tools:text="@string/msg_see_all_people_you"/>
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtFrameTwentySeven"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_11pxv"
+                android:paddingStart="@dimen/_20pxh"
+                android:paddingTop="@dimen/_10pxv"
+                android:singleLine="true"
+                android:text="@{interestsPeopleVM.interestsPeopleModel.txtFrameTwentySeven}"
+                style="@style/txtSolid" tools:text="@string/msg_more_people_to_follow"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerListprofilepicture"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_20pxv"
+                android:layout_width="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_40pxh}" tools:itemCount="5" tools:listitem="@layout/row_listprofilepicture"/>
+            <View android:background="@color/gray_300_87"
+                android:id="@+id/lineDividerline"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_20pxv" android:layout_width="@dimen/_335pxh"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

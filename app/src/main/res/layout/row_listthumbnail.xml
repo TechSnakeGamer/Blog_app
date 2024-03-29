@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listthumbnailRowModel" type="com.snakesapplication.app.modules.intereststopics.data.model.ListthumbnailRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowfollow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearRowthumbnail"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.47" android:layout_width="0dp" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageThumbnail"
+                android:layout_height="@dimen/_40pxh"
+                android:layout_width="@dimen/_40pxh"
+                android:scaleType="fitXY" cornerRadius="@{@dimen/_5pxh}"
+                imageRes="@{@drawable/img_thumbnail}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_thumbnail"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtEasytoUse"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_9pxv"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_weight="0.34" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{listthumbnailRowModel.txtEasytoUse}"
+                style="@style/txtPoppinsregular14_3" tools:text="@string/lbl_art"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnFollow"
+            android:layout_height="@dimen/_34pxv"
+            android:layout_marginBottom="@dimen/_3pxv"
+            android:layout_marginStart="@dimen/_164pxh"
+            android:layout_marginTop="@dimen/_3pxv"
+            android:layout_width="@dimen/_90pxh"
+            android:paddingBottom="@dimen/_6pxv"
+            android:paddingEnd="@dimen/_23pxh"
+            android:paddingStart="@dimen/_23pxh"
+            android:paddingTop="@dimen/_6pxv" android:singleLine="true"
+            android:text="@string/lbl_follow"
+            android:textAllCaps="false" style="@style/btnSolidRounded_1" tools:text="@string/lbl_follow"/>
+    </LinearLayout>
+</layout>
