@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="interestsTopicsVM" type="com.snakesapplication.app.modules.intereststopics.data.viewmodel.InterestsTopicsVM"/>
+    </data>
+    <androidx.core.widget.NestedScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollview"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnframefifteen"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <View android:id="@+id/viewFrameFifteen"
+                android:layout_height="@dimen/_29pxv"
+                android:layout_marginEnd="@dimen/_10pxh" android:layout_width="@dimen/_46pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtArtEntertain"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_29pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{interestsTopicsVM.interestsTopicsModel.txtArtEntertain}"
+                style="@style/txtPoppinssemibold14" tools:text="@string/msg_arts_entertainment"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerListthumbnail"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20pxv"
+                android:layout_width="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_16pxh}" tools:itemCount="10" tools:listitem="@layout/row_listthumbnail"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

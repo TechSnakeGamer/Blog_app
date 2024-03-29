@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="interestsVM" type="com.snakesapplication.app.modules.interests.data.viewmodel.InterestsVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearInterests"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <TextView android:ellipsize="end" android:id="@+id/txtWelcome"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_18pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{interestsVM.interestsModel.txtWelcome}"
+            style="@style/txtPoppinssemibold16_1" tools:text="@string/lbl_welcome"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtTitletext"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_39pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{interestsVM.interestsModel.txtTitletext}"
+            style="@style/txtPoppinsbold20" tools:text="@string/msg_what_are_you_interested"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtDescriptiontes"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_7pxv"
+            android:layout_width="match_parent"
+            android:text="@{interestsVM.interestsModel.txtDescriptiontes}"
+            style="@style/txtPoppinsregular16" tools:text="@string/msg_add_or_edit_topics"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnchips"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearRowchips"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtChips"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp"
+                    android:paddingBottom="@dimen/_9pxv"
+                    android:paddingEnd="@dimen/_19pxh"
+                    android:paddingStart="@dimen/_19pxh"
+                    android:paddingTop="@dimen/_8pxv"
+                    android:singleLine="true"
+                    android:text="@{interestsVM.interestsModel.txtChips}"
+                    style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_art"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtChipsOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_weight="0.43"
+                    android:layout_width="0dp"
+                    android:paddingBottom="@dimen/_7pxv"
+                    android:paddingEnd="@dimen/_10pxh"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_10pxv"
+                    android:singleLine="true"
+                    android:text="@{interestsVM.interestsModel.txtChipsOne}"
+                    style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_cryptocurrency"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtChipsTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_weight="0.37"
+                    android:layout_width="0dp"
+                    android:paddingBottom="@dimen/_7pxv"
+                    android:paddingEnd="@dimen/_10pxh"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_10pxv"
+                    android:singleLine="true"
+                    android:text="@{interestsVM.interestsModel.txtChipsTwo}"
+                    style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_lorem_ipsum"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerInterests"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_12pxh}" tools:itemCount="8" tools:listitem="@layout/row_interests"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnNext"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_56pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_16pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_16pxv" android:singleLine="true"
+            android:text="@string/lbl_next" android:textAllCaps="false"
+            style="@style/btnSolidRounded" tools:text="@string/lbl_next"/>
+    </LinearLayout>
+</layout>

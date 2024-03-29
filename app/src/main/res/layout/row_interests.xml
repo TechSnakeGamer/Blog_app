@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="interestsRowModel" type="com.snakesapplication.app.modules.interests.data.model.InterestsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowchips"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtChipsThree"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.47" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_7pxv"
+            android:paddingEnd="@dimen/_10pxh"
+            android:paddingStart="@dimen/_10pxh"
+            android:paddingTop="@dimen/_10pxv" android:singleLine="true"
+            android:text="@{interestsRowModel.txtChipsThree}"
+            style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_lorem_ipsum"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtChipsOne"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_weight="0.27" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_9pxv"
+            android:paddingEnd="@dimen/_10pxh"
+            android:paddingStart="@dimen/_10pxh"
+            android:paddingTop="@dimen/_8pxv" android:singleLine="true"
+            android:text="@{interestsRowModel.txtChipsOne}"
+            style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_lorem"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtChipsTwo"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_weight="0.27" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_7pxv"
+            android:paddingEnd="@dimen/_10pxh"
+            android:paddingStart="@dimen/_10pxh"
+            android:paddingTop="@dimen/_10pxv" android:singleLine="true"
+            android:text="@{interestsRowModel.txtChipsTwo}"
+            style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_ipsum"/>
+    </LinearLayout>
+</layout>

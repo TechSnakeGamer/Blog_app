@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="drawerItemDrawerMenuModel" type="com.snakesapplication.app.modules.itemdrawermenu.data.model.DrawerItemDrawerMenuModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumn"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStyleblack_900_99">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnprofilepicture"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_7pxv"
+                android:layout_marginEnd="@dimen/_88pxh"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylewhite_A700">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowprofilepicture"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_marginTop="@dimen/_40pxv"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageProfilePicture"
+                        android:layout_height="@dimen/_60pxh"
+                        android:layout_width="@dimen/_60pxh"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_profilepicture}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_profilepicture"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumnviewprofile"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_3pxv"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_2pxv"
+                        android:layout_weight="0.59"
+                        android:layout_width="0dp" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtViewProfile"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{drawerItemDrawerMenuModel.txtViewProfile}"
+                            style="@style/txtPoppinsregular14_2" tools:text="@string/lbl_welcome"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtJohnDoe"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6pxv"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{drawerItemDrawerMenuModel.txtJohnDoe}"
+                            style="@style/txtPoppinsmedium18" tools:text="@string/lbl_john_doe"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@color/gray_300"
+                    android:id="@+id/lineLineFive"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_marginTop="@dimen/_30pxv" android:layout_width="@dimen/_247pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHome"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_marginTop="@dimen/_49pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{drawerItemDrawerMenuModel.txtHome}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_home"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAudio"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_marginTop="@dimen/_31pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{drawerItemDrawerMenuModel.txtAudio}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_explore"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtReadingList"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_marginTop="@dimen/_28pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{drawerItemDrawerMenuModel.txtReadingList}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_interests"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTermAndCondition"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_marginTop="@dimen/_29pxv"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{drawerItemDrawerMenuModel.txtTermAndCondition}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/msg_terms_and_conditions"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNewStory"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_marginTop="@dimen/_32pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{drawerItemDrawerMenuModel.txtNewStory}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_privacy_policy2"/>
+                <View android:background="@color/gray_300"
+                    android:id="@+id/lineLineFiveOne"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_marginTop="@dimen/_280pxv" android:layout_width="@dimen/_247pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLogout"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_20pxv"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_marginTop="@dimen/_21pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{drawerItemDrawerMenuModel.txtLogout}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_logout"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
